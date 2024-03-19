@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Registration for CRM Access{% endblock title %}
+{% block body %}
+    <div class="container p-4 my-3 border border-2 shadow rounded">
+        <form method="post" action="{% url 'home' %}">
+            <div class="display-4 fs-2 mb-3 fw-bold">Sign up</div>
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="{{form.username.id_for_label}}">Username:</label>
+                        {{form.username}}
+                        {{form.username.errors}}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="{{form.first_name.id_for_label}}">First Name:</label>
+                        {{form.first_name}}
+                        {{form.first_name.errors}}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{form.last_name.id_for_label}}">Last Name:</label>
+                        {{form.last_name}}
+                        {{form.last_name.errors}}
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="{{form.email.id_for_label}}">Email Id:</label>
+                        {{form.email}}
+                        {{form.email.errors}}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="{{form.password1.id_for_label}}">Password:</label>
+                        {{form.password1}}
+                        {{form.password1.errors}}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="{{form.password2.id_for_label}}">Confirm Password</label>
+                        {{form.password2}}
+                        {{form.password2.errors}}
+                    </div>
+                </div>
+            </div>
+            {{form.errors}}
+            <button type="submit" class="btn btn-secondary col-12">Submit</button>
+        </form>
+    </div>
+{% endblock body %}

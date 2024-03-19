@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
 EXTERNAL_APPS = [
     'Home.apps.HomeConfig',
+    'Authentication.apps.AuthenticationConfig',
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
