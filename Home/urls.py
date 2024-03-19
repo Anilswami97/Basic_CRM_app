@@ -19,6 +19,9 @@ from Home import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('add_record/', views.add_record, name='add_record'),
+    path('modify_record/<str:slug>/', views.modify_record, name='modify_record'),
+    path('del_record/<str:slug>/', views.del_record, name='del_record'),
 ]
 
 
