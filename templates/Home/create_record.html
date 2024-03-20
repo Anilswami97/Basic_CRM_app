@@ -13,18 +13,22 @@
                     <div class="form-group">
                         <label for="{{form.first_name.id_for_label}}">First Name:</label>
                         {{form.first_name}}
+                        <div class="text-warning">{{form.first_name.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.last_name.id_for_label}}">Last Name:</label>
                         {{form.last_name}}
+                        <div class="text-warning">{{form.last_name.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.email.id_for_label}}">Email Id:</label>
                         {{form.email}}
+                        <div class="text-warning">{{form.email.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.phone.id_for_label}}">Phone:</label>
                         {{form.phone}}
+                        <div class="text-warning">{{form.phone.errors}}</div>
                     </div>
                 </div>
 
@@ -32,18 +36,22 @@
                     <div class="form-group">
                         <label for="{{form.address.id_for_label}}">Address:</label>
                         {{form.address}}
+                        <div class="text-warning">{{form.address.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.city.id_for_label}}">City:</label>
                         {{form.city}}
+                        <div class="text-warning">{{form.city.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.state.id_for_label}}">State:</label>
                         {{form.state}}
+                        <div class="text-warning">{{form.state.errors}}</div>
                     </div>
                     <div class="form-group">
                         <label for="{{form.zipcode.id_for_label}}">Zip code:</label>
                         {{form.zipcode}}
+                        <div class="text-warning">{{form.zipcode.errors}}</div>
                     </div>
                 </div>
             </div>

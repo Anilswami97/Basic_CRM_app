@@ -12,11 +12,11 @@
     
     <div class="container rounded shadow text-bg-secondary border border-2 p-4 my-3">
         {% if not user.is_authenticated %}
-            <a href="{% url 'signin'%}" class="btn btn-light shadow-lg me-2">Sign up</a>
-            <a href="{% url 'login'%}" class="btn btn-light shadow-lg ms-2">Log in</a>
+            <a href="{% url 'signin'%}"title="Sign up" class="btn btn-success shadow-lg me-2"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="{% url 'login'%}" title="Log in"class="btn btn-info shadow-lg ms-2"><i class="fa-solid fa-user-plus"></i></a>
             {% else %}    
-            <a href="{% url 'logout'%}" class="btn btn-danger shadow-lg me-2">Log out</a>
-            <a href="{% url 'add_record'%}" class="btn btn-light shadow-lg ms-2">Add Record</a>
+            <a href="{% url 'logout'%}" title="Log out" class="btn btn-danger shadow-lg me-2"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="{% url 'add_record'%}" title="Add record" class="btn btn-light shadow-lg ms-2"><i class="fa-solid fa-plus"></i></a>
         {% endif %}
     </div>
 
@@ -43,13 +43,13 @@
                             <td>{{record.last_name}}</td>
                             <td>{{record.phone}}</td>
                             <td>{{record.email}}</td>
-                            <td>{{record.address | truncatechars:10}}</td>
+                            <td title="{{record.address}}">{{record.address | truncatechars:10}}</td>
                             <td>{{record.city}}</td>
                             <td>{{record.state}}</td>
                             <td>{{record.zipcode}}</td>
                             <th scope="row">
-                                <a href="{% url 'modify_record' record.uni_slug %}" class="btn btn-sm btn-secondary">Modify</a>
-                                <a href="{% url 'del_record' record.uni_slug %}" class="btn btn-sm btn-danger">Del</a>
+                                <a href="{% url 'modify_record' record.uni_slug %}" title="Update" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="{% url 'del_record' record.uni_slug %}" title="Remove" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
                             </th>
                         </tr>
                     {% endfor %}
